@@ -9,8 +9,7 @@ int main(int argc, const char* argv[])
 
     try
     {
-        app.init(argc, argv);
-        app.run();
+        app.run(argc, argv);
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         return EXIT_FAILURE;

@@ -4,12 +4,12 @@
 
 class Application {
 public:
-	void init(int argc, const char* argv[]);
-	void run();
+	void run(int argc, const char* argv[]);
 
 private:
-	void connectToDatabase();
+	void init(int argc, const char* argv[]);
 	void loadData();
+	void connectToDatabase();
 	void sendData();
 	void close();
 

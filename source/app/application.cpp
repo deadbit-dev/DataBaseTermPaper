@@ -1,9 +1,10 @@
 #include "application.h"
 
-void Application::run()
+void Application::run(int argc, const char* argv[])
 {
-    connectToDatabase();
+    init(argc, argv);
     loadData();
+    connectToDatabase();
     sendData();
     close();
 }
@@ -23,6 +24,11 @@ void Application::init(int argc, const char* argv[])
     */
 }
 
+void Application::loadData()
+{
+    // TODO: load data from csv file
+}
+
 void Application::connectToDatabase()
 {
     // TODO: connect Database from local file or remote Server
@@ -32,11 +38,6 @@ void Application::connectToDatabase()
         Remote example:
             database = new DataBase("localhost", "root", "password", "database");
     */
-}
-
-void Application::loadData()
-{
-    // TODO: load data from csv file
 }
 
 void Application::sendData()
