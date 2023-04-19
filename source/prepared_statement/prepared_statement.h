@@ -1,6 +1,7 @@
 #pragma once
 
 #include "result.h"
+
 #include <stdint.h>
 
 struct PreparedStatement

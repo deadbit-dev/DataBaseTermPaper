@@ -1,6 +1,7 @@
 #pragma once
 
 #include "result.h"
+
 #include <sqlite3.h>
 
 class LocalResult : public Result

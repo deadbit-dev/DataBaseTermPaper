@@ -2,6 +2,7 @@
 
 #include "prepared_statement.h"
 #include "local_result.h"
+
 #include <sqlite3.h>
 
 class LocalPreparedStatement : public PreparedStatement

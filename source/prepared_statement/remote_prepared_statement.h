@@ -2,6 +2,7 @@
 
 #include "prepared_statement.h"
 #include "remote_result.h"
+
 #include <jdbc/mysql_connection.h>
 #include <jdbc/cppconn/prepared_statement.h>
 

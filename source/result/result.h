@@ -1,6 +1,7 @@
 #pragma once
 
 #include "sqltypes.h"
+
 #include <stdint.h>
 
 struct Result
