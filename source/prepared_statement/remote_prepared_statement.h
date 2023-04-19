@@ -1,7 +1,7 @@
 #pragma once
 
 #include "prepared_statement.h"
-
+#include "remote_result.h"
 #include <jdbc/mysql_connection.h>
 #include <jdbc/cppconn/prepared_statement.h>
 
@@ -12,7 +12,8 @@ class RemotePreparedStatement : public PreparedStatement
 public:
 	RemotePreparedStatement(sql::Connection* connection, const char* sql);
 	
-	virtual void executeQuery() override;
+	virtual Result* executeQuery() override;
+	virtual void resetParametrs() override;
 	virtual void setBoolean(unsigned int parameterIndex, bool value) override;
 	virtual void setDateTime(unsigned int parameterIndex, const char* value) override;
 	virtual void setDouble(unsigned int parameterIndex, double value) override;

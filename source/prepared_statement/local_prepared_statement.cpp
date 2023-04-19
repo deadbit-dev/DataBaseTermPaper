@@ -5,9 +5,14 @@ LocalPreparedStatement::LocalPreparedStatement(sqlite3* database, const char* sq
 	sqlite3_prepare_v2(database, sql, -1, &prepared_statement, nullptr);
 }
 
-void LocalPreparedStatement::executeQuery()
+Result* LocalPreparedStatement::executeQuery()
 {
 	sqlite3_step(prepared_statement);
+	return new LocalResult(prepared_statement);
+}
+
+void LocalPreparedStatement::resetParametrs()
+{
 	sqlite3_reset(prepared_statement);
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../data_base/data_base.h"
+#include "sqltypes.h"
 
 class Application {
 public:

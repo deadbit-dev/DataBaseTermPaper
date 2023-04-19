@@ -1,11 +1,13 @@
 #pragma once
 
+#include "result.h"
 #include <stdint.h>
 
 struct PreparedStatement
 {
 public:
-	virtual void executeQuery() = 0;
+	virtual Result* executeQuery() = 0;
+	virtual void resetParametrs() = 0;
 	virtual void setBoolean(unsigned int parameterIndex, bool value) = 0;
 	virtual void setDateTime(unsigned int parameterIndex, const char* value) = 0;
 	virtual void setDouble(unsigned int parameterIndex, double value) = 0;

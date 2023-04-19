@@ -9,6 +9,7 @@ file(GLOB SOURCES
 	${CMAKE_CURRENT_SOURCE_DIR}/../connection/*.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/../data_base/*.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/../prepared_statement/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../result/*.cpp
 	${DIR_THIRDPARTY}/sqlite/source/shell.c
 	${DIR_THIRDPARTY}/sqlite/source/sqlite3.c
 )
@@ -18,6 +19,7 @@ file(GLOB HEADERS
 	${CMAKE_CURRENT_SOURCE_DIR}/../connection/*.h
 	${CMAKE_CURRENT_SOURCE_DIR}/../data_base/*.h
 	${CMAKE_CURRENT_SOURCE_DIR}/../prepared_statement/*.h
+	${CMAKE_CURRENT_SOURCE_DIR}/../result/*.h
 )
 
 add_executable(${TARGET} ${SOURCES} ${HEADERS})
@@ -31,6 +33,7 @@ target_include_directories(${TARGET} PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR}/../connection/
 	${CMAKE_CURRENT_SOURCE_DIR}/../data_base/
 	${CMAKE_CURRENT_SOURCE_DIR}/../prepared_statement/
+	${CMAKE_CURRENT_SOURCE_DIR}/../result/
 )
 
 set_target_properties(${TARGET} PROPERTIES DEBUG_POSTFIX _debug)

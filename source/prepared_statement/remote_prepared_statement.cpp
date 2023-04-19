@@ -5,10 +5,13 @@ RemotePreparedStatement::RemotePreparedStatement(sql::Connection* connection, co
 	prepared_statement = connection->prepareStatement(sql);
 }
 
-void RemotePreparedStatement::executeQuery()
+Result* RemotePreparedStatement::executeQuery()
 {
-	prepared_statement->executeQuery();
+	sql::ResultSet* result = prepared_statement->executeQuery();
+	return new RemoteResult(prepared_statement, result);
 }
+
+void RemotePreparedStatement::resetParametrs() {}
 
 void RemotePreparedStatement::setBoolean(unsigned int parameterIndex, bool value)
 {
